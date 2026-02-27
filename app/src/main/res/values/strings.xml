@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pratilipi</string>
+    <string name="new_document">New</string>
+    <string name="untitled">Untitled</string>
+    <string name="save">Save</string>
+    <string name="document_list_title">Documents</string>
+    <string name="insert_image">Insert image</string>
+    <string name="text_color">Text colour</string>
+    <string name="highlight">Highlight</string>
+    <string name="permission_rationale">Storage access is needed to insert images from your gallery.</string>
+</resources>

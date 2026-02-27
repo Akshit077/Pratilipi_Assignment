@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_bg"
+        app:menu="@menu/editor_menu"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:titleTextColor="@color/primary" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_bg"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp">
+
+            <ImageButton
+                android:id="@+id/btnBold"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                app:srcCompat="@drawable/ic_bold"
+                app:tint="@color/primary" />
+
+            <ImageButton
+                android:id="@+id/btnItalic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/ic_italic"
+                app:tint="@color/primary" />
+
+            <ImageButton
+                android:id="@+id/btnUnderline"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/ic_underline"
+                app:tint="@color/primary" />
+
+            <ImageButton
+                android:id="@+id/btnStrikethrough"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/ic_strikethrough"
+                app:tint="@color/primary" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="24dp"
+                android:background="#33000000" />
+
+            <ImageButton
+                android:id="@+id/btnTextColor"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/text_color"
+                app:srcCompat="@drawable/ic_format_color_text"
+                app:tint="@color/primary" />
+
+            <ImageButton
+                android:id="@+id/btnHighlight"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/highlight"
+                app:srcCompat="@drawable/ic_highlight"
+                app:tint="@color/primary" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="24dp"
+                android:background="#33000000" />
+
+            <ImageButton
+                android:id="@+id/btnImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/insert_image"
+                app:srcCompat="@drawable/ic_image"
+                app:tint="@color/primary" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <EditText
+        android:id="@+id/titleInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@null"
+        android:hint="@string/untitled"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textAppearance="?attr/textAppearanceHeadlineSmall"
+        android:textColor="@color/primary" />
+
+    <EditText
+        android:id="@+id/contentInput"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        android:gravity="top|start"
+        android:inputType="textMultiLine|textCapSentences"
+        android:minHeight="120dp"
+        android:scrollbars="vertical"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="@color/primary" />
+</LinearLayout>
